@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Soft Stor Technology</title>
+    <link rel="icon" href="images-removebg-preview.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0a0a0a;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Navigation bar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #333;
+            padding: 15px 20px;
+            z-index: 100;
+            text-align: right;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d3d3d3;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 100px 0 50px;
+            background-color: #1a1a1a;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        /* Logo */
+        .logo {
+            width: 150px;
+            height: auto;
+        }
+
+        /* Main content */
+        main {
+            padding: 50px 20px;
+        }
+
+        /* Team section */
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .team-member {
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+            margin-bottom: 30px;
+        }
+
+        .team-member:hover {
+            transform: scale(1.05);
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+        }
+
+        /* Description */
+        .description {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+        }
+
+        /* Achievements section */
+        .achievements {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .achievement-images {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .achievement-image {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .achievement-image:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="intern.html">Internship</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <header>
+        <img src="images-removebg-preview.png" alt="Soft Stor Technology Logo" class="logo">
+        <h1>About Us - Soft Stor Technology</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Meet Our Team</h2>
+            <div class="team">
+                <div class="team-member" data-aos="fade-up" onclick="toggleDescription('desc3')">
+                    <img src="Bala.png" alt="R.Balamurugan">
+                    <h3>R.Balamurugan</h3>
+                </div>
+                <div class="description" id="desc3">
+                    <p> R.Balamurugan is the MD of Soft Stor Technology, responsible for the company development. and May lead the over all team.</p>
+                </div>
+                <!-- Team members go here -->
+                <div class="team-member" data-aos="fade-up" onclick="toggleDescription('desc1')">
+                    <img src="RSR.jpeg" alt="VJ.RSR">
+                    <h3>VJ.RSR</h3>
+                </div>
+                <div class="description" id="desc1">
+                    <p>VJ.RSR is the Manager at Soft Stor Technology, with extensive experience in project management and leadership.</p>
+                </div>
+
+                <div class="team-member" data-aos="fade-up" onclick="toggleDescription('desc2')">
+                    <img src="Manoj.jpeg" alt="P.Manoj Prabhakaran">
+                    <h3>P.Manoj Prabhakaran</h3>
+                </div>
+                <div class="description" id="desc2">
+                    <p>P.Manoj Prabhakaran is the Team Lead at Soft Stor Technology, responsible for coordinating and overseeing project development.</p>
+                </div>
+
+                <div class="team-member" data-aos="fade-up" onclick="toggleDescription('desc3')">
+                    <img src="ak.jpeg" alt="T.Ashok kumar">
+                    <h3>T.Ashok kumar</h3>
+                </div>
+                <div class="description" id="desc3">
+                    <p> T.Ashok kumar is the Team Lead at Soft Stor Technology, responsible for coordinating and overseeing project development.</p>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="achievements">
+            <h2>Our Achievements</h2>
+            <div class="achievement-images">
+                <img src="chevalpatti.jpeg" alt="Achievement 7" class="achievement-image">
+                <img src="chevalpatti2.jpeg" alt="Achievement 8" class="achievement-image">
+                <img src="chevalpatti 3.jpeg" alt="Achievement 9" class="achievement-image">
+                <img src="chevalpatti 4.jpeg" alt="Achievement 10" class="achievement-image">
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript for Description Toggle -->
+    <script>
+        function toggleDescription(descId) {
+            var description = document.getElementById(descId);
+            description.style.display = description.style.display === "none" ? "block" : "none";
+        }
+    </script>
+
+    <!-- AOS (Animate On Scroll) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
